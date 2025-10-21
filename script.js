@@ -51,4 +51,6 @@ function buttonClicked(event) {
         document.querySelector("#input_form button").disabled = true;
     }
 
+    // marker det gættede tal, så det er klar til at blive erstattet af næste indtastning
+    document.querySelector("#guess").select();
 }
