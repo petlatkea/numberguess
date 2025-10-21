@@ -39,6 +39,8 @@ function buttonClicked() {
         document.querySelector("#guesses").insertAdjacentHTML("beforeend",
             `<li>Du gættede på ${guess} - det er korrekt!</li>`
         ); 
+        // stop guessing - remove eventlistener
+        document.querySelector("#btn_guess").removeEventListener("click", buttonClicked);
     }
 
 }
