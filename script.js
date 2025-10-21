@@ -10,4 +10,9 @@ function main() {
 
 function buttonClicked() {
     console.log("Der blev klikket på knappen");
+
+    // modtag gæt
+    // NOTE: bruger https://developer.mozilla.org/en-US/docs/Web/API/HTMLInputElement/valueAsNumber
+    const guess = document.querySelector("#guess").valueAsNumber;
+    console.log(guess);
 }
