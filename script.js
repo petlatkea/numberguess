@@ -8,10 +8,13 @@ const number = Math.floor(Math.random()*99)+1;
 function main() {
     console.log("JavaScript kører!");
 
-    document.querySelector("#btn_guess").addEventListener("click", buttonClicked);
+    document.querySelector("#input_form").addEventListener("submit", buttonClicked);
 }
 
-function buttonClicked() {
+function buttonClicked(event) {
+    // prevent form-submit from loading another page
+    event.preventDefault();
+
     console.log("Der blev klikket på knappen");
 
     // modtag gæt
@@ -41,7 +44,7 @@ function buttonClicked() {
             `<li>Du gættede på ${guess} - det er korrekt!</li>`
         ); 
         // stop guessing - remove eventlistener
-        document.querySelector("#btn_guess").removeEventListener("click", buttonClicked);
+        document.querySelector("#input_form").removeEventListener("submit", buttonClicked);
     }
 
 }
