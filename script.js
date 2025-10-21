@@ -2,7 +2,8 @@
 
 window.addEventListener("DOMContentLoaded", main);
 
-const number = 42;
+// tilfældigt tal fra 1 til 99
+const number = Math.floor(Math.random()*99)+1;
 
 function main() {
     console.log("JavaScript kører!");
