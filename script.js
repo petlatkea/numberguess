@@ -45,6 +45,10 @@ function buttonClicked(event) {
         ); 
         // stop guessing - remove eventlistener
         document.querySelector("#input_form").removeEventListener("submit", buttonClicked);
+
+        // and disable input-field and button
+        document.querySelector("#input_form input").disabled = true;
+        document.querySelector("#input_form button").disabled = true;
     }
 
 }
