@@ -22,14 +22,23 @@ function buttonClicked() {
     // hvis det er for højt - skriv "Du gættede for højt"
     if (guess > number) {
         console.log("Du gættede for højt");
+        document.querySelector("#guesses").insertAdjacentHTML("beforeend",
+            `<li>Du gættede på ${guess} - det var for højt</li>`
+        ); 
     } 
     // hvis det var for lavt - skriv "Du gættede for lavt"
     if (guess < number) {
         console.log("Du gættede for lavt");
+        document.querySelector("#guesses").insertAdjacentHTML("beforeend",
+            `<li>Du gættede på ${guess} - det var for lavt</li>`
+        ); 
     }
     // hvis det var korrekt - skriv "Det var korrekt" - og stop
     if (guess == number) {
         console.log("Du gættede korrekt");
+        document.querySelector("#guesses").insertAdjacentHTML("beforeend",
+            `<li>Du gættede på ${guess} - det er korrekt!</li>`
+        ); 
     }
 
 }
